@@ -1,7 +1,7 @@
 html {
   font-size: 25px;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #888888, #242424);
+  background: radial-gradient( #888888, #242424);
   color: rgb(27, 27, 27);
 }
 
