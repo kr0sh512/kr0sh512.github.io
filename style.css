@@ -26,6 +26,7 @@ p {
 
 li {
     list-style: none;
+    padding: 0.3em;
 }
 
 a {
