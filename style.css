@@ -20,6 +20,11 @@ body {
     -o-transform: translate(-50%, -50%);
 }
 
+p,
+li {
+    font-size: inherit;
+}
+
 p {
     font-weight: bold;
 }

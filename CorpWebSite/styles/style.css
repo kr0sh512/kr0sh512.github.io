@@ -23,16 +23,19 @@ nav li {
   flex: 1;
 }
 
-nav a,
-nav span {
-  display: inline-block;
-  font-size: 2rem;
-  height: 3rem;
-  line-height: 1.7;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: black;
+nav a:link,
+nav a:visited,
+nav a:focus {
+  background: yellow;
+}
 
+nav a:hover {
+  background: orange;
+}
+
+nav a:active {
+  background: red;
+  color: white;
 }
 
 footer {
