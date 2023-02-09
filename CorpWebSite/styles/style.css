@@ -15,23 +15,26 @@ header {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
 }
 
-header>h1 {
+header .contacts {
+  height: 10rem;
+  display: flex;
+  /* justify-content: space-around; */
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
   font-size: 7rem;
   margin: 0 2rem;
   padding: 20px 0;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.541);
-  display: inline-block;
-}
-
-.contacts {
-  display: inline-block;
-  float: right;
-  width: 80rem;
 }
 
 header address {
+  margin: 0 10rem 0 0;
   font-size: 2rem;
-  margin: 3% 7%;
+  display: flex;
+  flex-direction: column;
 }
 
 nav {
@@ -49,8 +52,6 @@ nav ul {
 
 nav li {
   font-size: 2.5rem;
-  /* float: left; */
-  /* display: block; */
   display: inline-block;
   text-align: center;
   width: 25%;
