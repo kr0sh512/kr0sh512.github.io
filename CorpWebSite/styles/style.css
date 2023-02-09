@@ -10,15 +10,17 @@ body {
 }
 
 header {
-  margin-bottom: 1rem;
-  background-color: darkorange;
+  /* position: sticky;
+  top: 0; */
+
+  background-color: #b9db6b;
+  /* background-color: #e9feaf; */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
 }
 
 header .contacts {
   height: 10rem;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
   justify-content: space-between;
 }
@@ -26,7 +28,7 @@ header .contacts {
 header h1 {
   font-size: 7rem;
   margin: 0 2rem;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.541);
 }
 
@@ -38,7 +40,10 @@ header address {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
 nav ul {
@@ -54,11 +59,19 @@ nav li {
   font-size: 2.5rem;
   display: inline-block;
   text-align: center;
+  width: calc(25% - 1px);
+  border-right: 1px solid #000;
+}
+
+nav li:last-child {
   width: 25%;
+  border: 0;
 }
 
 nav a#active {
-  background: #e66100;
+  background: #6A994E;
+  color: white;
+  /* background: #8fb25c; */
 }
 
 nav a {
@@ -66,7 +79,6 @@ nav a {
   display: inline-block;
   line-height: 3;
   width: 100%;
-  border-right: 2px solid #000;
   text-decoration: none;
 }
 
@@ -77,17 +89,18 @@ nav a:last-child {
 nav a:link,
 nav a:visited,
 nav a:focus {
-  background: #ff6c00;
-  color: black;
+
+  background: #386641;
+  color: rgb(255, 255, 255);
 }
 
 nav a:hover,
 nav a:hover#active {
-  background: orange;
+  /* background: #D9F9B0; */
 }
 
 nav a:active {
-  background: red;
+  /* background: rgb(133, 231, 120); */
 }
 
 main {
