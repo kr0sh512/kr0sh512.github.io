@@ -2,7 +2,8 @@
 
 
 html {
-    font-size: 4em;
+    /* font-size: calc(100vmax / 100); */
+    font-size: calc(100vh / 37.5);
     font-family: 'Poppins', sans-serif;
     background-color: #F9F1F8;
     color: #ef476f;
@@ -37,8 +38,13 @@ html {
 }
 
 body {
+    font-size: 4rem;
     display: table-cell;
     vertical-align: middle;
+}
+
+ul {
+    text-align: center;
 }
 
 p,
