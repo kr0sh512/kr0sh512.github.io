@@ -1,7 +1,8 @@
 html {
   font-size: 10px;
   font-family: 'Montserrat', sans-serif;
-  background: radial-gradient(#ffffff, #d2d2d2);
+  /* background: radial-gradient(#ffffff, #d2d2d2); */
+  background-color: #d2d2d2;
   color: rgb(27, 27, 27);
 }
 
@@ -10,25 +11,21 @@ body {
 }
 
 header {
-  /* position: sticky;
-  top: 0; */
-
   background-color: #b9db6b;
-  /* background-color: #e9feaf; */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
 }
 
 header .contacts {
-  height: 10rem;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 header h1 {
-  font-size: 7rem;
+  font-size: 8rem;
   margin: 0 2rem;
-  padding: 20px 0 0 0;
+  padding: 20px 0;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.541);
 }
 
@@ -37,6 +34,26 @@ header address {
   font-size: 2rem;
   display: flex;
   flex-direction: column;
+}
+
+header address a {
+  height: 30px;
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+
+header address a#phone {
+  background-image: url("https://img.icons8.com/windows/32/null/phone.png");
+  background-position: left center;
+}
+
+header address a#email {
+  background-image: url("https://img.icons8.com/material-outlined/24/null/filled-message.png");
+}
+
+header address a#marker {
+  background-image: url("https://img.icons8.com/material-outlined/24/null/place-marker--v1.png");
 }
 
 nav {
@@ -68,10 +85,10 @@ nav li:last-child {
   border: 0;
 }
 
+/*     Активная вкдадка*/
 nav a#active {
   background: #6A994E;
   color: white;
-  /* background: #8fb25c; */
 }
 
 nav a {
@@ -86,22 +103,20 @@ nav a:last-child {
   border: 0;
 }
 
+/*     Основные вкдадки*/
 nav a:link,
 nav a:visited,
 nav a:focus {
-
   background: #386641;
   color: rgb(255, 255, 255);
 }
 
+/*     Курсор- вкдадки*/
 nav a:hover,
-nav a:hover#active {
-  /* background: #D9F9B0; */
-}
+nav a:hover#active {}
 
-nav a:active {
-  /* background: rgb(133, 231, 120); */
-}
+/*     При клике вкдадки*/
+nav a:active {}
 
 main {
   font-size: 3rem;
