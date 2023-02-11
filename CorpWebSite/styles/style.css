@@ -16,7 +16,6 @@ header {
 }
 
 header .contacts {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,23 +36,26 @@ header address {
 }
 
 header address a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 30px;
   padding-left: 35px;
   background-repeat: no-repeat;
   background-size: 24px;
-}
-
-header address a#phone {
-  background-image: url("https://img.icons8.com/windows/32/null/phone.png");
   background-position: left center;
 }
 
+header address a#phone {
+  background-image: url("../icons/phone.png");
+}
+
 header address a#email {
-  background-image: url("https://img.icons8.com/material-outlined/24/null/filled-message.png");
+  background-image: url("../icons/mail.png");
 }
 
 header address a#marker {
-  background-image: url("https://img.icons8.com/material-outlined/24/null/place-marker--v1.png");
+  background-image: url("../icons/marker.png");
 }
 
 nav {
