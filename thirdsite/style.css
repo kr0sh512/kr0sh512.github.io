@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    height: 110vh;
+    height: 100vh;
     font-size: 50px;
     background-color: #ffd7e2;
     /*#fff0f8*/
@@ -13,8 +13,8 @@ body {
 }
 
 p {
-    font-family: 'Forum', cursive;
     font-family: 'Anonymous Pro', monospace;
+    font-family: 'Forum', cursive;
     font-family: 'Comfortaa', cursive;
     line-height: 1.6;
     margin: 5%;
@@ -41,10 +41,3 @@ p {
     align-items: center;
     align-content: center;
 }
-
-/* br {
-    display: block;
-    padding: 6rem 0;
-    margin: 100px;
-    line-height: 22px;
-} */
