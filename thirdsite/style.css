@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Comfortaa:wght@500&family=Forum&display=swap');
 
+html {
+    overflow: hidden;
+}
+
 body {
-    height: 100vh;
+    height: 110vh;
     font-size: 50px;
     background-color: #ffd7e2;
     /*#fff0f8*/
