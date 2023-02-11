@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Bad+Script&family=Merriweather:ital@1&display=swap');
+
+body {
+    height: 100vh;
+    font-size: 50px;
+    background-color: #ffd7e2;
+    /*#fff0f8*/
+    background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%)
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    font-family: 'Bad Script', cursive;
+    font-family: 'Anonymous Pro', monospace;
+    line-height: 1.6;
+    margin: 5%;
+    color: #430012;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    /* width: ; */
+    width: 60%;
+}
+
+.outer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+br {
+    display: block;
+    padding: 6rem 0;
+    margin: 100px;
+    line-height: 22px;
+}

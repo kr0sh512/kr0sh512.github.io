@@ -3,7 +3,7 @@
 
 html {
     /* font-size: calc(100vmax / 100); */
-    font-size: calc(100vh / 37.5);
+    font-size: 30px;
     font-family: 'Poppins', sans-serif;
     background-color: #F9F1F8;
     color: #ef476f;
