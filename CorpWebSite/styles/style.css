@@ -39,6 +39,7 @@ header h1 {
   padding: 2rem 3rem;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
+  width: 50%;
 }
 
 header h1 .title {
@@ -52,7 +53,7 @@ header h1 .subcontact {
 
 header address {
   margin: 0 10rem 0 0;
-  font-size: 3rem;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   font-family: 'Nunito Sans', sans-serif;
@@ -65,9 +66,9 @@ header address a {
   flex-direction: column;
   justify-content: center;
   height: 5rem;
-  padding-left: 4.5rem;
+  padding-left: 3.5rem;
   background-repeat: no-repeat;
-  background-size: 3rem;
+  background-size: 2.4rem;
   background-position: left center;
 }
 
