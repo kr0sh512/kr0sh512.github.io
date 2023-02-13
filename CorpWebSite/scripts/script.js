@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => { // DOM готов к вз�
 
     const onScrollHeader = () => { // объявляем основную функцию onScrollHeader
 
-        const header = document.querySelector('nav') // находим header и записываем в константу
+        const nav = document.querySelector('nav') // находим header и записываем в константу
 
         let prevScroll = window.pageYOffset // узнаем на сколько была прокручена страница ранее
         let currentScroll // на сколько прокручена страница сейчас (пока нет значения)
@@ -11,15 +11,14 @@ document.addEventListener('DOMContentLoaded', () => { // DOM готов к вз�
 
             currentScroll = window.pageYOffset // узнаем на сколько прокрутили страницу
 
-            const headerHidden = () => header.classList.contains('header_hidden') // узнаем скрыт header или нет
+            const headerHidden = () => nav.classList.contains('header_hidden') // узнаем скрыт header или нет
 
             if (currentScroll > prevScroll && !headerHidden()) { // если прокручиваем страницу вниз и header не скрыт
-                header.classList.add('header_hidden') // то скрываем header
+                nav.classList.add('header_hidden') // то скрываем header
             }
             if (currentScroll < prevScroll && headerHidden()) { // если прокручиваем страницу вверх и header скрыт
-                header.classList.remove('header_hidden') // то отображаем header
+                nav.classList.remove('header_hidden') // то отображаем header
             }
-
             prevScroll = currentScroll // записываем на сколько прокручена страница на данный момент
 
         })

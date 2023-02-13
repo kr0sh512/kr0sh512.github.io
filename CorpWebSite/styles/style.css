@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,300;1,400&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-size: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -20,6 +15,7 @@ body {
 header {
   background-color: #b9db6b;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
+  margin: 0;
 }
 
 header a {
@@ -88,17 +84,17 @@ header address a#marker {
   background-image: url("../icons/marker.png");
 }
 
-.header_hidden {
+.header_hidden_ {
   transform: translateY(-100%);
 }
 
 nav {
   transition: transform 1s;
   -webkit-transition: transform 1s;
-  position: sticky;
-  top: 0;
+  /* position: sticky; */
+  /* top: 0; */
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   font-style: italic;
