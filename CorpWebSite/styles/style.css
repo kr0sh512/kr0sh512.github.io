@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,300;1,400&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+}
 
 html {
   font-size: 10px;
@@ -89,7 +93,8 @@ header address a#marker {
 }
 
 nav {
-  transition: 1s;
+  transition: transform 1s;
+  -webkit-transition: transform 1s;
   position: sticky;
   top: 0;
   font-size: 2.5rem;
