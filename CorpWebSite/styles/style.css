@@ -35,9 +35,8 @@ header .contacts {
 
 header h1 {
   font-size: 8rem;
-  margin: 2rem 3rem;
-  /* padding: 20px 0; */
-  /* line-height: 0.6; */
+  margin: 0;
+  padding: 2rem 3rem;
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
 }
