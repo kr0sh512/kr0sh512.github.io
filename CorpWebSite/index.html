@@ -1,7 +1,51 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (var j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+      ym(92422674, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/92422674"
+          style="position: absolute; left: -9999px"
+          alt=""
+        /></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <link rel="icon" href="resources/icons/favicon.ico" type="image/icon" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="resources/icons/favicon192.png"
+    />
+    <link href="resources/styles/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8" />
     <title>ИП Маслов</title>
   </head>
@@ -24,54 +68,52 @@
       <nav>
         <ul>
           <li><a href="#" onClick="scroll(0,0); return false" id="active">Главная</a></li>
-          <li><a href="services.html">Прайс-лист</a></li>
-          <li><a href="vacansies.html">Вакансии</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="services/index.html">Прайс-лист</a></li>
+          <li><a href="vacansies/index.html">Вакансии</a></li>
+          <li><a href="contacts/index.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <h1>Привет!</h1>
-      <p>Это вебсайт</p>
-      <p>Зачем он нужен?</p>
-      <p>Никто не имеет никакого понятия (но он есть)</p>
-      <h2>Мои контакты:</h2>
-
-      <div id="more">
-        <h2>Прочая лабудень:</h2>
-        <p>бла</p>
-        <p>блабла</p>
-        <p>блабла</p>
-        <p>бла...</p>
-      </div>
-      <div id="more">
-        <h2>Прочая лабудень:</h2>
-        <p>бла</p>
-        <p>блабла</p>
-        <p>блабла</p>
-        <p>бла...</p>
-      </div>
-      <div id="more">
-        <h2>Прочая лабудень:</h2>
-        <p>бла</p>
-        <p>блабла</p>
-        <p>блабла</p>
-        <p>бла...</p>
-      </div>
-      <div id="more">
-        <h2>Прочая лабудень:</h2>
-        <p>бла</p>
-        <p>блабла</p>
-        <p>блабла</p>
-        <p>бла...</p>
-      </div>
-    </main>
-    <footer>
+      <h1>О нас:</h1>
+      <p>
+        Мы занимаемся поставками нерудных материалов предприятиям и частным лицам по Пензе
+        и Пензенской области.
+      </p>
+      <p>Огромное количество спецтехники, среди которой:</p>
       <ul>
-        <li>My phone: <a href="#"></a></li>
+        <li>
+          Самосвалы:
+          <ul>
+            <li>Камазы 15 тонн</li>
+            <li>Камазы 20 тонн</li>
+            <li>Мазы 20 тонн</li>
+            <li>Маны 25 тонн</li>
+          </ul>
+        </li>
+        <li>
+          Погрузчики:
+          <ul>
+            <li>Экскаваторы фронтальные Гидромекс</li>
+            <li>Экскаватор полноповоротный Досан</li>
+          </ul>
+        </li>
       </ul>
-    </footer>
+      <p>Доставляемые материалы:</p>
+      <ul>
+        <li>Песок природный</li>
+        <li>Песок обогащенный</li>
+        <li>ПГС</li>
+        <li>Щебень известняковый</li>
+        <li>Щебень гранитный разных фракций</li>
+        <li>Чернозём</li>
+        <li>Грунт</li>
+        <li>Строительный мусор</li>
+        <li>и другие...</li>
+      </ul>
+    </main>
+    <footer></footer>
   </body>
   <script src="scripts/script.js"></script>
 </html>
