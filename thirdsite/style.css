@@ -9,7 +9,7 @@ body {
     font-size: 50px;
     background-color: #ffd7e2;
     /*#fff0f8*/
-    background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%)
+    /* background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%) */
 }
 
 p {
