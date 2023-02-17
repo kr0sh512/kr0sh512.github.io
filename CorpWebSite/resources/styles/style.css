@@ -154,13 +154,134 @@ nav a:focus {
 /* /------- Конец основного верхнего блока*/
 
 
-.map {
-  width: calc(100% - 6rem);
-  margin: 10rem 3rem;
+.form_map {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  border: 2px solid #000;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.form_map .map {
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(38, 66, 41, 0.6);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  width: 40%;
+}
+
+.form_map iframe {
+  border: none;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (orientation:portrait) {
+
+  .fm_outer {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form_map {
+    flex-direction: column;
+    width: 90%;
+    justify-content: stretch;
+  }
+
+  .form_map .map,
+  .form_map .form {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 3rem 0;
+  }
+
+  .form_map .map {
+    order: 2;
+    height: 35vh;
+    /* height: 100%; */
+  }
+
+  .form_map .form {
+    order: 1;
+  }
+}
+
+.form {
+  width: calc(40% - 6rem);
+  padding: 1rem 3rem;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(38, 66, 41, 0.6);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form form h1 {
+  font-size: 3rem;
+}
+
+.form form input,
+.form form textarea {
+  padding: 0.5rem 1rem;
+  /* text-align: center; */
+  font-size: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.form form textarea {
+  resize: none;
+  scrollbar-width: thin;
+  scrollbar-width: none;
+  height: 15rem;
+  font-size: 1.5rem;
+  text-align: start;
+}
+
+.form form label {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.form form input[type=submit] {
+  width: auto;
+  font-size: 2rem;
+  line-height: 2;
+  padding: 0rem 1rem;
+  border: none;
+  background-color: #333;
+  background-color: #386641;
+  color: white;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 main {

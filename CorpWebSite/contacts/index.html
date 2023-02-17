@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
+    <script defer src="../resources/scripts/jquery-3.6.3.min.js"></script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -61,7 +62,6 @@
         <h1>
           <span class="title">ИП Маслов</span>
           <span class="subcontact">Сергей Николаевич, услуги спецтехники</span>
-          <!-- <span class="subcontact">Услуги спецтехники</span> -->
         </h1>
         <address>
           <a href="tel:+79022036128" id="phone">Тел.: +7 (902) 203-61-28</a>
@@ -83,15 +83,60 @@
       </nav>
     </header>
     <main>
-      <div class="map">
-        <!-- https://yandex.ru/maps/?um=constructor%3Af010871d584e63299dbcaabc96b72443b15b2cd38e89d22c8c9f586e01d866ab&source=constructorLink -->
-        <script
-          type="text/javascript"
-          charset="utf-8"
-          async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af010871d584e63299dbcaabc96b72443b15b2cd38e89d22c8c9f586e01d866ab&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"
-        ></script>
+      <div class="fm_outer">
+        <div class="form_map">
+          <div class="map">
+            <!-- https://yandex.ru/maps/?um=constructor%3Af010871d584e63299dbcaabc96b72443b15b2cd38e89d22c8c9f586e01d866ab&source=constructorLink -->
+            <script
+              type="text/javascript"
+              charset="utf-8"
+              async
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af010871d584e63299dbcaabc96b72443b15b2cd38e89d22c8c9f586e01d866ab&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"
+            ></script>
+          </div>
+          <div class="form">
+            <form id="form_ask">
+              <h1>Оставьте свои данные:</h1>
+              <label for="name"><span style="color: red">*</span>Имя:</label>
+              <input type="text" id="name" name="name" required /><br />
+              <label for="phone"><span style="color: red">*</span>Телефон:</label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="+7 (XXX) XXX-XX-XX"
+              /><br />
+              <label for="email"><span style="color: red">*</span>Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="example@example.com"
+              /><br />
+              <label for="question">Ваше обращение:</label>
+              <textarea id="question" name="question"></textarea><br />
+              <div style="font-size: 1.5rem; align-self: flex-start; margin: 1rem">
+                <span style="color: red">*</span> - Введите ваше имя и телефон и/или email
+              </div>
+              <div
+                hidden
+                id="warning_name"
+                style="
+                  font-size: 1.5rem;
+                  align-self: flex-start;
+                  margin: 1rem;
+                  border-bottom: 1px solid red;
+                "
+              >
+                Заполните все необходимые поля
+              </div>
+              <input type="submit" value="Отправить" />
+            </form>
+          </div>
+        </div>
       </div>
     </main>
   </body>
+  <script src="script_for_form.js"></script>
 </html>

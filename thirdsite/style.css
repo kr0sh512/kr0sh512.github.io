@@ -29,7 +29,6 @@ p {
 .main {
     display: flex;
     justify-content: center;
-    /* width: ; */
     width: 60%;
 }
 
@@ -40,4 +39,30 @@ p {
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+
+#c1 {
+    opacity: 0;
+    animation-duration: 1s;
+    animation-name: opac;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
+@keyframes opac {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+#c2 {
+    opacity: 0;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-name: opac;
 }
