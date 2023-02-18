@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,700;1,300;1,400&&family=Open+Sans&display=swap');
 
 html {
   font-size: 10px;
@@ -72,15 +72,15 @@ header address a {
   background-position: left center;
 }
 
-header address a#phone {
+header address a#t-phone {
   background-image: url("../icons/phone.png");
 }
 
-header address a#email {
+header address a#t-email {
   background-image: url("../icons/mail.png");
 }
 
-header address a#marker {
+header address a#t-marker {
   background-image: url("../icons/marker.png");
 }
 
@@ -184,6 +184,99 @@ nav a:focus {
   height: 100%;
 }
 
+.form {
+  width: calc(40% - 6rem);
+  padding: 1rem 3rem;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(38, 66, 41, 0.6);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form form h1 {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 4rem;
+}
+
+.form form label {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  align-self: flex-start;
+}
+
+.warning_name {
+  font-size: 2rem;
+  align-self: flex-start;
+  margin: 1rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.hid {
+  text-decoration: underline red;
+}
+
+.suc {
+  align-self: center;
+  font-size: 3rem;
+}
+
+.form form input,
+.form form textarea {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.form form textarea {
+  resize: none;
+  scrollbar-width: none;
+  height: 15rem;
+}
+
+.form form input[type=submit] {
+  line-height: 2;
+  font-size: 3rem;
+  padding: 0rem 1rem;
+  border: none;
+  background-color: #386641;
+  color: white;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.form form input[type=submit]:active {
+  background-color: #1C3321;
+  box-shadow: -5px -5px 2px #000;
+  margin-top: 5px;
+  transform: translate(0, 0.25rem);
+  -webkit-transform: translate(0, 0.25rem);
+  -moz-transform: translate(0, 0.25rem);
+  -ms-transform: translate(0, 0.25rem);
+  -o-transform: translate(0, 0.25rem);
+}
+
 @media screen and (orientation:portrait) {
 
   .fm_outer {
@@ -207,81 +300,27 @@ nav a:focus {
   .form_map .map {
     order: 2;
     height: 35vh;
-    /* height: 100%; */
   }
 
   .form_map .form {
     order: 1;
   }
-}
 
-.form {
-  width: calc(40% - 6rem);
-  padding: 1rem 3rem;
-  border: 2px solid rgba(0, 0, 0, 0.4);
-  border: 2px solid rgba(38, 66, 41, 0.6);
-  border-radius: 2rem;
-  -webkit-border-radius: 2rem;
-  -moz-border-radius: 2rem;
-  -ms-border-radius: 2rem;
-  -o-border-radius: 2rem;
-}
+  .form form input,
+  .form form textarea,
+  .form form label,
+  .form form input[type=submit] {
+    font-size: 3rem;
+  }
 
-.form form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-}
+  #warning_name {
+    font-size: 2rem;
+  }
 
-.form form h1 {
-  font-size: 3rem;
-}
-
-.form form input,
-.form form textarea {
-  padding: 0.5rem 1rem;
-  /* text-align: center; */
-  font-size: 2rem;
-  width: 100%;
-  margin-bottom: 2rem;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
-}
-
-.form form textarea {
-  resize: none;
-  scrollbar-width: thin;
-  scrollbar-width: none;
-  height: 15rem;
-  font-size: 1.5rem;
-  text-align: start;
-}
-
-.form form label {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  align-self: flex-start;
-}
-
-.form form input[type=submit] {
-  width: auto;
-  font-size: 2rem;
-  line-height: 2;
-  padding: 0rem 1rem;
-  border: none;
-  background-color: #333;
-  background-color: #386641;
-  color: white;
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+  .form form input[type=submit] {
+    margin: 2rem;
+    padding: 0 2rem;
+  }
 }
 
 main {

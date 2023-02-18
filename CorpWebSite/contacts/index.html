@@ -64,9 +64,9 @@
           <span class="subcontact">Сергей Николаевич, услуги спецтехники</span>
         </h1>
         <address>
-          <a href="tel:+79022036128" id="phone">Тел.: +7 (902) 203-61-28</a>
-          <a href="mailto:sergey@maslov58.ru" id="email">E-mail: sergey@maslov58.ru</a>
-          <a href="https://yandex.ru/maps/-/CCUCBLbbGA" id="marker"
+          <a href="tel:+79022036128" id="t-phone">Тел.: +7 (902) 203-61-28</a>
+          <a href="mailto:sergey@maslov58.ru" id="t-email">E-mail: sergey@maslov58.ru</a>
+          <a href="https://yandex.ru/maps/-/CCUCBLbbGA" id="t-marker"
             >г.Пенза ул. Строителей, 5д</a
           >
         </address>
@@ -98,7 +98,7 @@
             <form id="form_ask">
               <h1>Оставьте свои данные:</h1>
               <label for="name"><span style="color: red">*</span>Имя:</label>
-              <input type="text" id="name" name="name" required /><br />
+              <input type="text" id="name" name="name" /><br />
               <label for="phone"><span style="color: red">*</span>Телефон:</label>
               <input
                 type="text"
@@ -111,26 +111,17 @@
                 type="email"
                 id="email"
                 name="email"
-                required
                 placeholder="example@example.com"
               /><br />
-              <label for="question">Ваше обращение:</label>
+              <label for="question">Сообщение:</label>
               <textarea id="question" name="question"></textarea><br />
-              <div style="font-size: 1.5rem; align-self: flex-start; margin: 1rem">
-                <span style="color: red">*</span> - Введите ваше имя и телефон и/или email
+              <div class="warning_name">
+                <span style="color: red">*</span> - Введите ваше имя, телефон и/или email
               </div>
-              <div
-                hidden
-                id="warning_name"
-                style="
-                  font-size: 1.5rem;
-                  align-self: flex-start;
-                  margin: 1rem;
-                  border-bottom: 1px solid red;
-                "
-              >
-                Заполните все необходимые поля
+              <div hidden class="warning_name hid">
+                Пожалуйста, заполните все необходимые поля
               </div>
+              <div class="warning_name suc" hidden>Мы получили ваше обращение!</div>
               <input type="submit" value="Отправить" />
             </form>
           </div>

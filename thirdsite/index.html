@@ -2,7 +2,10 @@
 <html>
   <head>
     <title>Lovely Site</title>
+    <script defer src="jquery-3.6.3.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="icon" type="image/png" sizes="192x192" href="faviconpng.png" /> -->
+    <link rel="icon" href="favicon.ico" type="image/icon" sizes="any" />
   </head>
   <body>
     <!-- <video autoplay loop muted no-controls preload="auto" width="200px">
@@ -11,15 +14,15 @@
     <div class="outer box">
       <div class="main box">
         <div>
-          <p id="c1">
+          <p id="example">Тут Ваш текст, который будет плавно появляться.</p>
+          <p hidden id="c1">
             Этот текст тут находится просто так. <br />
             Не обращайте, пожалуйста, на него никакого внимания.<br />
             <br />
-            Ну всё, хватит уже. Сказали же, что здесь нечего искать <br />
-            На этот тоже нечего пялить.
+            Ну всё, хватит уже. Сказали же. <br />
           </p>
         </div>
-        <div id="c2" hidden><p>А это второй абзац этого текста</p></div>
+        <!-- <div id="c2" hidden><p>А это второй абзац этого текста</p></div> -->
       </div>
     </div>
     <script src="script.js"></script>

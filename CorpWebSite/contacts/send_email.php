@@ -4,12 +4,14 @@
     $email = $_POST['email'];
     $question = $_POST['question'];
     $recipient = 'sergey.maslov58@yandex.ru';
+    $recipient = 'vika_gudova87@mail.ru';
 
-    $subject = 'Заявка на сайте';
-    $message = "Name: $name\nPhone: $phone\nEmail: $email\nQuestion:\n$question";
+    $subject = 'Заявка на сайте maslov58.ru';
+    $message = "Имя: $name\nТелефон: $phone\nEmail: $email\nСообщение:\n$question";
     $headers = 'From: webmaster@maslov58.ru' . "\r\n" .
                'Reply-To: webmaster@maslov58.ru' . "\r\n" .
                'X-Mailer: PHP/' . phpversion();
 
-    mail($recipient, $subject, $message, $headers);
+    mail($recipient1, $subject, $message, $headers);
+    mail($recipient2, $subject, $message, $headers);
 ?>

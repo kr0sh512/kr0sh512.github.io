@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Comfortaa:wght@500&family=Forum&display=swap');
 
 html {
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
     font-size: 50px;
     background-color: #ffd7e2;
     /*#fff0f8*/
-    /* background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%) */
+    background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%)
 }
 
 p {
@@ -41,14 +41,6 @@ p {
     align-content: center;
 }
 
-#c1 {
-    opacity: 0;
-    animation-duration: 1s;
-    animation-name: opac;
-    animation-iteration-count: 2;
-    animation-direction: alternate;
-}
-
 @keyframes opac {
     from {
         opacity: 0;
@@ -60,9 +52,21 @@ p {
     }
 }
 
-#c2 {
+#example .new {
     opacity: 0;
-    animation-delay: 2s;
-    animation-duration: 1s;
-    animation-name: opac;
+}
+
+#example {
+    padding: 100px;
+    width: 350px;
+    display: none;
+}
+
+#example .div_opacity {
+    opacity: 1;
+    transition: opacity .7s ease-in-out;
+    -webkit-transition: opacity .7s ease-in-out;
+    -moz-transition: opacity .7s ease-in-out;
+    -ms-transition: opacity .7s ease-in-out;
+    -o-transition: opacity .7s ease-in-out;
 }
