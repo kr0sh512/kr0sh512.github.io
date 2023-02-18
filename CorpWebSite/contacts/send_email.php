@@ -3,8 +3,8 @@
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $question = $_POST['question'];
-    $recipient = 'sergey.maslov58@yandex.ru';
-    $recipient = 'vika_gudova87@mail.ru';
+    $recipient1 = 'sergey.maslov58@yandex.ru';
+    $recipient2 = 'vika_gudova87@mail.ru';
 
     $subject = 'Заявка на сайте maslov58.ru';
     $message = "Имя: $name\nТелефон: $phone\nEmail: $email\nСообщение:\n$question";
