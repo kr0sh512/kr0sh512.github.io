@@ -8,21 +8,31 @@
     <link rel="icon" href="favicon.ico" type="image/icon" sizes="any" />
   </head>
   <body>
-    <!-- <video autoplay loop muted no-controls preload="auto" width="200px">
-      <source src="2.webm" type="video/webm" />
-    </video> -->
-    <div class="outer box">
+    <div id="load_outer">
+      <div id="loader"><div></div></div>
+    </div>
+    <div class="outer box" id="b1">
       <div class="main box">
-        <div>
-          <p id="example">Тут Ваш текст, который будет плавно появляться.</p>
-          <p hidden id="c1">
-            Этот текст тут находится просто так. <br />
-            Не обращайте, пожалуйста, на него никакого внимания.<br />
-            <br />
-            Ну всё, хватит уже. Сказали же. <br />
-          </p>
-        </div>
-        <!-- <div id="c2" hidden><p>А это второй абзац этого текста</p></div> -->
+        <p id="rg_text">Тут Ваш текст, который будет плавно появляться.</p>
+        <p id="st_text">Тут Ваш <span>текст</span>, который будет плавно появляться.</p>
+      </div>
+    </div>
+
+    <div class="outer box" id="b2">
+      <div class="main box">
+        <p id="rg_text">Тут Ваш второй текст, который будет плавно появляться.</p>
+        <p id="st_text">
+          Тут Ваш второй <span>текст</span>, который будет плавно появляться.
+        </p>
+      </div>
+    </div>
+
+    <div class="outer box" id="b3">
+      <div class="main box">
+        <p id="rg_text">Тут Ваш третий текст, который будет плавно появляться.</p>
+        <p id="st_text">
+          Тут Ваш третий <span>текст</span>, который будет плавно появляться.
+        </p>
       </div>
     </div>
     <script src="script.js"></script>

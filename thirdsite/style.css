@@ -21,6 +21,29 @@ p {
     color: #430012;
 }
 
+@keyframes anim {
+    0% {
+        color: black;
+        border: none;
+    }
+
+    100% {
+        color: red;
+        border-bottom: 4px solid red;
+    }
+}
+
+.st span {
+    animation: anim 1s ease-in;
+    -webkit-animation: anim 1s ease-in;
+    color: red;
+    border-bottom: 4px solid red;
+}
+
+#st_text {
+    display: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,37 +55,36 @@ p {
     width: 60%;
 }
 
-.outer {
+.outer,
+#load_outer {
     height: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
 }
 
-@keyframes opac {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-
-    }
+.outer {
+    display: none;
 }
 
-#example .new {
+#load_outer {
+    display: flex;
+}
+
+
+#rg_text .new {
     opacity: 0;
 }
 
-#example {
+#rg_text,
+#st_text {
     padding: 100px;
     width: 350px;
     display: none;
 }
 
-#example .div_opacity {
+#rg_text .div_opacity {
     opacity: 1;
     transition: opacity .7s ease-in-out;
     -webkit-transition: opacity .7s ease-in-out;
@@ -70,3 +92,74 @@ p {
     -ms-transition: opacity .7s ease-in-out;
     -o-transition: opacity .7s ease-in-out;
 }
+
+
+
+/*-----------loader-----------*/
+
+#loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    transform: rotate(45deg);
+    transform-origin: 40px 40px;
+}
+
+#loader div {
+    top: 32px;
+    left: 32px;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background: red;
+    animation: loader45 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+#loader div:after,
+#loader div:before {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: red;
+}
+
+#loader div:before {
+    left: -24px;
+    border-radius: 50% 0 0 50%;
+}
+
+#loader div:after {
+    top: -24px;
+    border-radius: 50% 50% 0 0;
+}
+
+@keyframes loader45 {
+    0% {
+        transform: scale(0.95);
+    }
+
+    5% {
+        transform: scale(1.1);
+    }
+
+    39% {
+        transform: scale(0.85);
+    }
+
+    45% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+/*-----------end-loader-----------*/
