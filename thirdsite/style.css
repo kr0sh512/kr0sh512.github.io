@@ -21,7 +21,7 @@ p {
     color: #430012;
 }
 
-@keyframes anim {
+/* @keyframes anim {
     0% {
         color: black;
         border: none;
@@ -38,10 +38,31 @@ p {
     -webkit-animation: anim 1s ease-in;
     color: red;
     border-bottom: 4px solid red;
-}
+} */
 
 #st_text {
     display: none;
+}
+
+#st_text span {
+    display: inline-block;
+}
+
+#st_text span::after {
+    display: block;
+    content: "";
+    height: 3px;
+    width: 0%;
+    background-color: #225384;
+    transition: width 0.4s ease-in-out;
+}
+
+/* #st_text span:hover::after {
+    width: 100%;
+} */
+
+.st span::after {
+    width: 100%;
 }
 
 * {
