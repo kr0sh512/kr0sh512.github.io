@@ -24,7 +24,7 @@ function sleep(milliseconds) {
 
 function animateShow(id) {
     delay = 60;
-    elem = $('#b' + parseInt(id) + ' #rg_text');
+    elem = $('#b' + parseInt(id) + ' .rg_text');
     document.getElementById('b' + parseInt(id)).style.display = "flex";
     elem.show();
     var string = elem.text();
@@ -71,18 +71,18 @@ isRun = false;
 
 function func2(i) {
     animateShow(i);
-    t = $('#b' + parseInt(i) + ' #rg_text').text().length * 60 + 100;
+    t = $('#b' + parseInt(i) + ' .rg_text').text().length * 60 + 100;
     setTimeout(function () {
-        document.querySelector('#b' + parseInt(i) + ' #rg_text').style.display = "none";
-        document.querySelector('#b' + parseInt(i) + ' #st_text').style.display = "block";
-        $('#b' + parseInt(i) + ' #st_text').addClass('st');
+        document.querySelector('#b' + parseInt(i) + ' .rg_text').style.display = "none";
+        document.querySelector('#b' + parseInt(i) + ' .st_text').style.display = "block";
+        $('#b' + parseInt(i) + ' .st_text').addClass('st');
     }, t);
     isRun = false;
 }
 
 function fade(i) {
     fadetime = 600;
-    $('#b' + parseInt(i) + ' #st_text').fadeOut(fadetime);
+    $('#b' + parseInt(i) + ' .st_text').fadeOut(fadetime);
     setTimeout(function () {
         document.getElementById('b' + parseInt(i)).style.display = "none";
     }, fadetime);

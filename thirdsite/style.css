@@ -40,15 +40,13 @@ p {
     border-bottom: 4px solid red;
 } */
 
-#st_text {
-    display: none;
-}
 
-#st_text span {
+/* #st_text span {
     display: inline-block;
 }
 
 #st_text span::after {
+    box-sizing: content-box;
     display: block;
     content: "";
     height: 3px;
@@ -57,13 +55,38 @@ p {
     transition: width 0.4s ease-in-out;
 }
 
-/* #st_text span:hover::after {
+#st_text span:hover::after {
     width: 100%;
 } */
 
-.st span::after {
-    width: 100%;
+/*-----------span_style-----------*/
+
+.st_text {
+    display: none;
 }
+
+.st_text span {
+    background: no-repeat 0 100%;
+    background-image: linear-gradient(90deg, rgb(255, 23, 54), rgb(225, 0, 255));
+    background-size: 0% 3px;
+    background-position: bottom center;
+    transition: background-size .5s ease;
+    -webkit-transition: background-size .5s ease;
+    -moz-transition: background-size .5s ease;
+    -ms-transition: background-size .5s ease;
+    -o-transition: background-size .5s ease;
+}
+
+/* .st_text span:hover {
+    background-size: 100% 3px;
+} */
+
+.st span {
+    /* transition: background-size .5s ease; */
+    background-size: 100% 3px;
+}
+
+/*-----------end-span_style-----------*/
 
 * {
     margin: 0;
@@ -94,18 +117,18 @@ p {
 }
 
 
-#rg_text .new {
+.rg_text .new {
     opacity: 0;
 }
 
-#rg_text,
-#st_text {
+.rg_text,
+.st_text {
     padding: 100px;
     width: 350px;
     display: none;
 }
 
-#rg_text .div_opacity {
+.rg_text .div_opacity {
     opacity: 1;
     transition: opacity .7s ease-in-out;
     -webkit-transition: opacity .7s ease-in-out;
