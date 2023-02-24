@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /resources/
+Disallow: /errors
+Sitemap: http://maslov58.ru/resources/sitemap.xml
