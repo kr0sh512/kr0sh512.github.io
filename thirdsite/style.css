@@ -2,11 +2,15 @@
 
 html {
     overflow: hidden;
+    color: black;
+    color: #430012;
+    color: #7A1832;
+    color: #0A397F;
 }
 
 body {
     height: 100vh;
-    font-size: 50px;
+    font-size: 75px;
     background-color: #ffd7e2;
     background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%)
 }
@@ -17,7 +21,6 @@ p {
     font-family: 'Comfortaa', cursive;
     line-height: 1.6;
     margin: 5%;
-    color: #430012;
 }
 
 .st_text {
@@ -29,29 +32,38 @@ p {
 @keyframes animation-underline {
     0% {
         background-size: 0% 4px;
+        color: black;
     }
 
     100% {
         background-size: 100% 4px;
+        color: var(--text-color);
     }
 }
 
 .st span {
-    background: no-repeat 0 100%;
-    background-image: linear-gradient(90deg, rgb(255, 23, 54), rgb(225, 0, 255));
     background-position: bottom center;
+    background: no-repeat 0 100%;
     background-size: 100% 4px;
     animation-name: animation-underline;
-    animation-timing-function: easy-out;
+    animation-timing-function: ease-out;
     animation-duration: 1.5s;
+    color: var(--text-color);
+}
+
+#b1 .st span {
+    background-image: linear-gradient(90deg, rgb(255, 23, 54), rgb(225, 0, 255));
+    --text-color: inherit;
 }
 
 #b2 .st span {
     background-image: linear-gradient(black, black);
+    --text-color: green;
 }
 
 #b3 .st span {
     background-image: linear-gradient(90deg, green, hotpink);
+    --text-color: red;
 }
 
 
@@ -60,12 +72,13 @@ p {
 * {
     margin: 0;
     padding: 0;
+    z-index: 1;
 }
 
 .main {
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 50%;
 }
 
 .outer,
@@ -92,9 +105,9 @@ p {
 
 .rg_text,
 .st_text {
-    padding: 100px;
-    width: 350px;
+    width: 100%;
     display: none;
+    text-align: center;
 }
 
 .rg_text .div_opacity {
@@ -176,3 +189,20 @@ p {
 }
 
 /*-----------end-loader-----------*/
+
+#out-video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
+    opacity: 0.8;
+    z-index: 0;
+
+    display: none;
+}

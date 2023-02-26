@@ -3,7 +3,7 @@
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $question = $_POST['question'];
-    $recipient1 = 'sergey.maslov58@yandex.ru';
+    $recipient1 = 'sergey@maslov58.ru';
     
     $subject = 'Заявка на сайте maslov58.ru';
     $message = "Имя: $name\nТелефон: $phone\nEmail: $email\nСообщение:\n$question";
