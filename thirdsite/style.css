@@ -2,9 +2,9 @@
 
 html {
     overflow: hidden;
-    color: black;
     color: #430012;
     color: #7A1832;
+    color: black;
     color: #0A397F;
 }
 
@@ -21,6 +21,9 @@ p {
     font-family: 'Comfortaa', cursive;
     line-height: 1.6;
     margin: 5%;
+    /* text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.37), -2px -2px 3px rgba(0, 0, 0, 0.37); */
+    /* text-shadow: 0 0 0 6px white, 0 0 0 8px gray; */
+    text-shadow: 2px 2px 8px rgba(1, 5, 255, 0.27), -1px -1px 16px rgba(0, 38, 255, 0.27);
 }
 
 .st_text {
@@ -32,7 +35,7 @@ p {
 @keyframes animation-underline {
     0% {
         background-size: 0% 4px;
-        color: black;
+        color: inherit;
     }
 
     100% {
@@ -43,22 +46,22 @@ p {
 
 .st span {
     background-position: bottom center;
-    background: no-repeat 0 100%;
+    background-repeat: no-repeat;
     background-size: 100% 4px;
     animation-name: animation-underline;
     animation-timing-function: ease-out;
     animation-duration: 1.5s;
+    background-image: linear-gradient(90deg, var(--text-color), var(--text-color));
     color: var(--text-color);
 }
 
 #b1 .st span {
-    background-image: linear-gradient(90deg, rgb(255, 23, 54), rgb(225, 0, 255));
-    --text-color: inherit;
+    --text-color: red;
 }
 
 #b2 .st span {
-    background-image: linear-gradient(black, black);
-    --text-color: green;
+    --text-color: rgb(255, 196, 0);
+    text-shadow: 2px 2px 8px rgba(255, 196, 0, 0.27), -1px -1px 16px rgba(255, 196, 0, 0.27);
 }
 
 #b3 .st span {
