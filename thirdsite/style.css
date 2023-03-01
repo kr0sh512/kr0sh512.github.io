@@ -2,28 +2,22 @@
 
 html {
     overflow: hidden;
-    color: #430012;
-    color: #7A1832;
-    color: black;
-    color: #0A397F;
+    color: rgb(53, 0, 20);
+    font-size: 10px;
 }
 
 body {
     height: 100vh;
-    font-size: 75px;
+    font-size: 7.5rem;
     background-color: #ffd7e2;
     background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%)
 }
 
 p {
-    font-family: 'Anonymous Pro', monospace;
-    font-family: 'Forum', cursive;
     font-family: 'Comfortaa', cursive;
     line-height: 1.6;
     margin: 5%;
-    /* text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.37), -2px -2px 3px rgba(0, 0, 0, 0.37); */
-    /* text-shadow: 0 0 0 6px white, 0 0 0 8px gray; */
-    text-shadow: 2px 2px 8px rgba(1, 5, 255, 0.27), -1px -1px 16px rgba(0, 38, 255, 0.27);
+    text-shadow: 2px 2px 8px rgba(87, 0, 48, 0.27), -1px -1px 16px rgba(136, 0, 34, 0.27);
 }
 
 .st_text {
@@ -36,11 +30,13 @@ p {
     0% {
         background-size: 0% 4px;
         color: inherit;
+        text-shadow: 2px 2px 8px rgba(87, 0, 48, 0.27), -1px -1px 16px rgba(136, 0, 34, 0.27);
     }
 
     100% {
         background-size: 100% 4px;
         color: var(--text-color);
+        text-shadow: 2px 2px 8px var(--tca), -1px -1px 16px var(--tca);
     }
 }
 
@@ -53,20 +49,52 @@ p {
     animation-duration: 1.5s;
     background-image: linear-gradient(90deg, var(--text-color), var(--text-color));
     color: var(--text-color);
+    text-shadow: 2px 2px 8px var(--tca), -1px -1px 16px var(--tca);
 }
 
-#b1 .st span {
-    --text-color: red;
-}
-
+/* 
 #b2 .st span {
     --text-color: rgb(255, 196, 0);
-    text-shadow: 2px 2px 8px rgba(255, 196, 0, 0.27), -1px -1px 16px rgba(255, 196, 0, 0.27);
+    --tca: rgba(255, 196, 0, 0.27);
+} 
+*/
+
+@keyframes anim-press {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.8);
+        -webkit-transform: scale(0.8);
+        -moz-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        -o-transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
 }
 
 #b3 .st span {
-    background-image: linear-gradient(90deg, green, hotpink);
-    --text-color: red;
+    display: inline-block;
+    animation-name: anim-press;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+}
+
+#b4 .st span {
+    --text-color: rgb(255, 196, 0);
+    --tca: rgba(255, 196, 0, 0.27);
 }
 
 
@@ -122,7 +150,31 @@ p {
     -o-transition: opacity .7s ease-in-out;
 }
 
+#out-video {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    overflow: hidden;
+    opacity: 0.8;
+    z-index: 0;
 
+    display: none;
+}
+
+/* .outer {
+    height: 0%;
+}
+
+.outer:nth-child(5) {
+    display: flex;
+    height: 100%;
+} */
 
 /*-----------loader-----------*/
 
@@ -192,20 +244,3 @@ p {
 }
 
 /*-----------end-loader-----------*/
-
-#out-video {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    position: fixed;
-    overflow: hidden;
-    opacity: 0.8;
-    z-index: 0;
-
-    display: none;
-}

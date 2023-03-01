@@ -37,7 +37,7 @@ function fade(i) {
 
 it = 2;
 document.onclick = function () {
-    if (it == 4) return;
+    if (it == 5) return;
     if (!isRun) {
         isRun = true;
         fade(it - 1);
