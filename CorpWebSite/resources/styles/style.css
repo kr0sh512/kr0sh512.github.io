@@ -356,6 +356,10 @@ main {
   margin: 3rem 5rem;
 }
 
+.main-box {
+  background: linear-gradient(rgba(255, 255, 255, 0.502), rgba(255, 255, 255, 0.5)), linear-gradient(rgba(0, 82, 0, 0.502), rgba(0, 82, 0, 0.5)), url("../../stripes.jpg");
+}
+
 main section {
   max-width: 130rem;
 }
@@ -403,10 +407,31 @@ main ul ul {
 }
 
 main section {
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
 }
 
+.main-box {
+  margin: 4rem 0rem;
+  box-sizing: border-box;
+  position: relative;
+  width: calc(100% + 6rem);
+  left: -3rem;
+  padding: 3rem 3rem;
+  border: 5px solid rgb(38, 66, 41);
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+}
 
+.main-box>*:first-child {
+  margin-top: 0;
+}
+
+.main-box>*:last-child {
+  margin-bottom: 0;
+}
 
 /*############################################################################---------footer------------*/
 
