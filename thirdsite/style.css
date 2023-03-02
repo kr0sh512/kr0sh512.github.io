@@ -3,6 +3,7 @@
 html {
     overflow: hidden;
     color: rgb(53, 0, 20);
+    color: #190F24;
     font-size: 10px;
 }
 
@@ -10,14 +11,19 @@ body {
     height: 100vh;
     font-size: 7.5rem;
     background-color: #ffd7e2;
-    background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%)
+    background: linear-gradient(230deg, rgba(255, 215, 226, 1) 55%, rgba(214, 255, 244, 1) 100%);
+    background: linear-gradient(230deg, rgba(255, 215, 226, 1) 50%, rgba(243, 229, 255, 1) 75%, rgba(214, 255, 244, 1) 100%);
 }
 
 p {
     font-family: 'Comfortaa', cursive;
     line-height: 1.6;
     margin: 5%;
-    text-shadow: 2px 2px 8px rgba(87, 0, 48, 0.27), -1px -1px 16px rgba(136, 0, 34, 0.27);
+    /* text-shadow: 2px 2px 8px rgba(87, 0, 48, 0.27), -1px -1px 16px rgba(136, 0, 34, 0.27); */
+    text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+        3px 4px 4px rgba(179, 147, 211, 0.15),
+        4px 6px 4px rgba(179, 147, 211, 0.2),
+        5px 8px 4px rgba(179, 147, 211, 0.25);
 }
 
 .st_text {
@@ -30,13 +36,13 @@ p {
     0% {
         background-size: 0% 4px;
         color: inherit;
-        text-shadow: 2px 2px 8px rgba(87, 0, 48, 0.27), -1px -1px 16px rgba(136, 0, 34, 0.27);
+        /* text-shadow: 2px 2px 8px rgba(87, 0, 48, 0.27), -1px -1px 16px rgba(136, 0, 34, 0.27); */
     }
 
     100% {
         background-size: 100% 4px;
         color: var(--text-color);
-        text-shadow: 2px 2px 8px var(--tca), -1px -1px 16px var(--tca);
+        /* text-shadow: 2px 2px 8px var(--tca), -1px -1px 16px var(--tca); */
     }
 }
 
@@ -58,6 +64,18 @@ p {
     --tca: rgba(255, 196, 0, 0.27);
 } 
 */
+
+#b2 .st span {
+    --text-color: #190F24;
+}
+
+#b3 .st span {
+    display: inline-block;
+    animation-name: anim-press;
+    animation-timing-function: ease-in-out;
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+}
 
 @keyframes anim-press {
     0% {
@@ -83,13 +101,6 @@ p {
         -ms-transform: scale(1);
         -o-transform: scale(1);
     }
-}
-
-#b3 .st span {
-    display: inline-block;
-    animation-name: anim-press;
-    animation-timing-function: ease-in-out;
-    animation-duration: 0.5s;
 }
 
 #b4 .st span {
