@@ -5,6 +5,11 @@ html {
     color: rgb(53, 0, 20);
     color: #190F24;
     font-size: 10px;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+        3px 4px 4px rgba(179, 147, 211, 0.15),
+        4px 6px 4px rgba(179, 147, 211, 0.2),
+        5px 8px 4px rgba(179, 147, 211, 0.25);
 }
 
 body {
@@ -70,19 +75,19 @@ p {
 
 @keyframes toget {
     0% {
-        transform: translateX(0);
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
     }
 
     100% {
-        transform: translateX(var(--b1tr));
-        -webkit-transform: translateX(var(--b1tr));
-        -moz-transform: translateX(var(--b1tr));
-        -ms-transform: translateX(var(--b1tr));
-        -o-transform: translateX(var(--b1tr));
+        transform: translateY(var(--b1tr));
+        -webkit-transform: translateY(var(--b1tr));
+        -moz-transform: translateY(var(--b1tr));
+        -ms-transform: translateY(var(--b1tr));
+        -o-transform: translateY(var(--b1tr));
     }
 }
 
@@ -90,17 +95,17 @@ p {
     display: inline-block;
     animation-name: toget;
     animation-duration: 1.5s;
-    /* animation-delay: 0.3s; */
-    --b1tr: -1.5rem;
-    transform: translateX(var(--b1tr));
-    -webkit-transform: translateX(var(--b1tr));
-    -moz-transform: translateX(var(--b1tr));
-    -ms-transform: translateX(var(--b1tr));
-    -o-transform: translateX(var(--b1tr));
+    /*animation-delay: 0.3s;*/
+    --b1tr: -3rem;
+    transform: translateY(var(--b1tr));
+    -webkit-transform: translateY(var(--b1tr));
+    -moz-transform: translateY(var(--b1tr));
+    -ms-transform: translateY(var(--b1tr));
+    -o-transform: translateY(var(--b1tr));
 }
 
 #b3 .st span:nth-child(1) {
-    --b1tr: 1.5rem;
+    --b1tr: 3rem;
 }
 
 #b4 .st span {
