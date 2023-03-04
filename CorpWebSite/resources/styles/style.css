@@ -277,7 +277,8 @@ nav a#active {
   height: 15rem;
 }
 
-.form form input[type=submit] {
+.form form input[type=submit],
+button {
   cursor: pointer;
   line-height: 2;
   font-size: 3rem;
@@ -300,7 +301,8 @@ nav a#active {
   -o-transition: background-size .5s ease;
 }
 
-.form form input[type=submit]:hover {
+.form form input[type=submit]:hover,
+button:hover {
   background-size: 100% 3px, 100% 100%;
 }
 
@@ -461,10 +463,54 @@ main section {
   max-height: 100%;
 } */
 
+
+
+
 /*############################################################################---------footer------------*/
 
-footer {
-  margin-top: 1rem;
+/*--------------------------------Table-----------*/
+
+section.for-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.for-table a {
+  /* align-self: flex-end; */
+  margin: 2rem;
+}
+
+.for-table button {
+  padding: 0 2rem;
+  font-size: 2.5rem;
+  padding-left: 50px;
+  background: url("../icons/download.png"), #386641;
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  background-size: 40px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid grey;
+  padding: 0.5rem 1.5rem;
+  font-size: 2rem;
+}
+
+tr td:nth-child(odd) {
+  text-align: center;
+}
+
+caption {
+  margin-bottom: 3rem;
+  text-align: start;
 }
 
 /* Slideshow container */
