@@ -588,8 +588,18 @@ footer {
   background-color: dimgray;
   box-shadow: 0px 0px 6px #000;
   padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
 }
 
 footer ul {
   list-style-type: none;
+  line-height: 1.5;
+}
+
+footer address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
