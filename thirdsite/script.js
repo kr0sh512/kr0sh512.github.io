@@ -23,6 +23,12 @@ function startAnim(i) {
         document.querySelector('#b' + parseInt(i) + ' .rg_text').style.display = "none";
         document.querySelector('#b' + parseInt(i) + ' .st_text').style.display = "block";
         $('#b' + parseInt(i) + ' .st_text').addClass('st');
+        if (i == 7) {
+            setTimeout(function () {
+                document.querySelector("video").src = "videos/fire.webm";
+                document.querySelector("#out-video").style = "display: flex;";
+            }, 1200);
+        }
     }, t);
     isRun = false;
 }
@@ -35,11 +41,11 @@ function fade(i) {
     }, fadetime);
 }
 
-// ! изменение текущей "локации"
-lt = 7;           // * количество готовых кадров
-it = 1;           // * номер стартового кадра
-is_debug = (it == 2); // * не сменять кадр
-// ! изменение текущей "локации"
+// * изменение текущей "локации"
+lt = 10;                  //  количество готовых кадров
+it = 10;                  // ! номер стартового кадра
+is_debug = (it != 1);    //  не сменять кадр
+// * изменение текущей "локации"
 
 document.onclick = function () {
     if (it == lt + 1 || is_debug) return;
@@ -54,9 +60,11 @@ document.onclick = function () {
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(function () {
-        document.getElementById("load_outer").style.display = "none";
-        startAnim(it++);
-    }, 400);
+    if (is_debug || prompt("Введите пароль", "") == "ZayaZlaya58") {
+        setTimeout(function () {
+            document.getElementById("load_outer").style.display = "none";
+            startAnim(it++);
+        }, 400);
+    }
 });
 
