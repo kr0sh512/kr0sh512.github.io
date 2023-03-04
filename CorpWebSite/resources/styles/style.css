@@ -9,8 +9,8 @@ html {
   cursor: default;
 }
 
-body {
-  min-height: 100vh;
+main {
+  min-height: 80vh;
 }
 
 * {
@@ -28,7 +28,6 @@ a {
 header {
   background-color: #b9db6b;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.295);
-  /* box-shadow: 0 0px 6px #000; */
   cursor: default;
 }
 
@@ -119,7 +118,6 @@ nav {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: 300;
   font-style: italic;
-  /* border-bottom: 3px solid #b9db6b; */
   box-shadow: 0px 0px 6px #000;
 }
 
@@ -148,7 +146,6 @@ nav a {
   display: inline-block;
   line-height: 2;
   width: 100%;
-  text-decoration: none;
   color: white;
 }
 
@@ -165,9 +162,7 @@ nav a:link,
 nav a:visited,
 nav a:focus,
 nav a:active {
-  text-decoration: none;
   background: #386641;
-  background: linear-gradient(currentColor 0 0) #386641 bottom /var(--d, 0) 3px no-repeat;
   background: linear-gradient(0deg, #386641 25%, white 25%, white 100%) #386641 bottom /var(--d, 0) 4px no-repeat;
   transition: background-size 0.5s;
 }
@@ -187,7 +182,7 @@ nav a#active {
   align-items: stretch;
 }
 
-/*map*/
+/*---------------map*/
 
 .form_map .map {
   border: 2px solid rgba(38, 66, 41, 0.6);
@@ -210,7 +205,7 @@ nav a#active {
   height: 100%;
 }
 
-/*form*/
+/*---------------form*/
 
 .form {
   background-color: #ebebeb;
@@ -310,6 +305,8 @@ button:hover {
   background-size: 100% 3px, 100% 100%;
 }
 
+/*---------------------mobile*/
+
 @media screen and (orientation:portrait) {
 
   .fm_outer {
@@ -364,32 +361,6 @@ main {
   margin: 3rem 5rem;
 }
 
-/* .main-box {
-  background: linear-gradient(rgba(255, 255, 255, 0.502), rgba(255, 255, 255, 0.5)),
-    linear-gradient(rgba(0, 82, 0, 0.502), rgba(0, 82, 0, 0.5)),
-    url("../../stripes.jpg");
-} */
-
-main section {
-  max-width: 130rem;
-}
-
-/* main section:nth-child(1) {
-  max-width: 50%;
-}
-
-main .first-section {
-  display: flex;
-}
-
-main .first-section img {
-  display: block;
-  max-width: 50%;
-  width: auto;
-  height: auto;
-} */
-
-
 main h1 {
   display: inline-block;
   margin: 2rem;
@@ -407,7 +378,6 @@ main p {
 
 main ul {
   list-style-type: none;
-  /* list-style-position: inside; */
   margin-left: 3rem;
 }
 
@@ -419,6 +389,8 @@ main ul ul {
 main section {
   margin-bottom: 3rem;
 }
+
+/*----------------images*/
 
 .main-box {
   margin: 4rem 0rem;
@@ -446,11 +418,6 @@ main section {
   justify-content: space-between;
 }
 
-/* 
-.main div {
-  width: 30%;
-} */
-
 .main-box-images {
   width: 100%;
   /*height: 100%; */
@@ -459,18 +426,6 @@ main section {
   flex-direction: column;
   justify-content: center;
 }
-
-/* 
-.main-box-images img {
-  object-fit: contain;
-  max-width: 100%;
-  max-height: 100%;
-} */
-
-
-
-
-/*############################################################################---------footer------------*/
 
 /*--------------------------------Table-----------*/
 
@@ -502,7 +457,6 @@ td,
 th {
   border: 2px solid grey;
   padding: 0.5rem 1.5rem;
-  /* font-size: 2rem; */
 }
 
 tr:nth-child(odd) {
@@ -522,22 +476,17 @@ caption {
   text-align: start;
 }
 
-/*--------------------------------end-Table-----------*/
+/*--------------------------------slideshow-----------*/
 
-
-/* Slideshow container */
 .slideshow-container {
-  /* height: 60%; */
   position: relative;
   margin-bottom: 1rem;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -554,7 +503,6 @@ caption {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -562,35 +510,28 @@ caption {
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
 @keyframes fade {
-  from {
+  0% {
     opacity: .4
   }
 
-  to {
+  100% {
     opacity: 1
   }
 }
 
+/*############################################################################---------footer------------*/
 footer {
+  margin-top: 7rem;
+  box-sizing: border-box;
   width: 100%;
-  height: 15rem;
-  background-color: dimgray;
+  background-color: #386641;
   box-shadow: 0px 0px 6px #000;
   padding: 3rem;
   display: flex;
   justify-content: space-between;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: whitesmoke;
 }
 
 footer ul {
@@ -602,4 +543,18 @@ footer address {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+footer .creator {
+  align-self: flex-end;
+  font-size: 1.5rem;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer a:hover,
+footer a:active {
+  text-decoration: none;
 }
