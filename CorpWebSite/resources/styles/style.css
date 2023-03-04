@@ -9,6 +9,10 @@ html {
   cursor: default;
 }
 
+body {
+  min-height: 100vh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -518,6 +522,9 @@ caption {
   text-align: start;
 }
 
+/*--------------------------------end-Table-----------*/
+
+
 /* Slideshow container */
 .slideshow-container {
   /* height: 60%; */
@@ -573,4 +580,16 @@ caption {
   to {
     opacity: 1
   }
+}
+
+footer {
+  width: 100%;
+  height: 15rem;
+  background-color: dimgray;
+  box-shadow: 0px 0px 6px #000;
+  padding: 3rem;
+}
+
+footer ul {
+  list-style-type: none;
 }
