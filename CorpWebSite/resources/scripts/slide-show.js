@@ -33,4 +33,4 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     let nowTime = new Date();
     last_time = nowTime;
-} 
+}
