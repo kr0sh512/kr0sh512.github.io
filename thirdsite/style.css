@@ -5,9 +5,15 @@ html {
     color: rgb(53, 0, 20);
     color: #190F24;
     font-size: 10px;
+    font-family: 'Comfortaa', cursive;
+    text-shadow: 2px 2px 4px rgba(179, 147, 211, 0.1),
+        3px 4px 4px rgba(179, 147, 211, 0.15),
+        4px 6px 4px rgba(179, 147, 211, 0.2),
+        5px 8px 4px rgba(179, 147, 211, 0.25);
 }
 
 body {
+    cursor: default;
     height: 100vh;
     font-size: 7.5rem;
     background-color: #ffd7e2;
@@ -32,17 +38,23 @@ p {
 
 /*-----------span_style-----------*/
 
+@keyframes anim-color {
+    0% {
+        color: inherit;
+    }
+
+    100% {
+        color: var(--text-color);
+    }
+}
+
 @keyframes animation-underline {
     0% {
         background-size: 0% 4px;
-        color: inherit;
-        /* text-shadow: 2px 2px 8px rgba(87, 0, 48, 0.27), -1px -1px 16px rgba(136, 0, 34, 0.27); */
     }
 
     100% {
         background-size: 100% 4px;
-        color: var(--text-color);
-        /* text-shadow: 2px 2px 8px var(--tca), -1px -1px 16px var(--tca); */
     }
 }
 
@@ -55,21 +67,48 @@ p {
     animation-duration: 1.5s;
     background-image: linear-gradient(90deg, var(--text-color), var(--text-color));
     color: var(--text-color);
-    text-shadow: 2px 2px 8px var(--tca), -1px -1px 16px var(--tca);
 }
-
-/* 
-#b2 .st span {
-    --text-color: rgb(255, 196, 0);
-    --tca: rgba(255, 196, 0, 0.27);
-} 
-*/
 
 #b2 .st span {
     --text-color: #190F24;
 }
 
+@keyframes toget {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(var(--b1tr));
+        -webkit-transform: translateY(var(--b1tr));
+        -moz-transform: translateY(var(--b1tr));
+        -ms-transform: translateY(var(--b1tr));
+        -o-transform: translateY(var(--b1tr));
+    }
+}
+
 #b3 .st span {
+    display: inline-block;
+    animation-name: toget;
+    animation-duration: 1.5s;
+    /*animation-delay: 0.3s;*/
+    --b1tr: -3rem;
+    transform: translateY(var(--b1tr));
+    -webkit-transform: translateY(var(--b1tr));
+    -moz-transform: translateY(var(--b1tr));
+    -ms-transform: translateY(var(--b1tr));
+    -o-transform: translateY(var(--b1tr));
+}
+
+#b3 .st span:nth-child(1) {
+    --b1tr: 3rem;
+}
+
+#b4 .st span {
     display: inline-block;
     animation-name: anim-press;
     animation-timing-function: ease-in-out;
@@ -103,10 +142,79 @@ p {
     }
 }
 
-#b4 .st span {
-    --text-color: rgb(255, 196, 0);
-    --tca: rgba(255, 196, 0, 0.27);
+#b5 .st span {
+    --text-color: rgb(255, 251, 0);
+    background: none;
+    box-shadow:
+        0 0 0 20px #FFDE0080,
+        0 0 0 40px #FFDE0040,
+        0 0 0 60px #FFDE0020,
+        0 0 0 80px #FFDE0010,
+        0 0 0 100px #FFDE0000,
+        0 0 40px 100px #FFDE0010;
+    animation:
+        sunrise 2.5s infinite linear forwards,
+        rays 2s 2.5s infinite linear, anim-color 1.5s ease-out;
+    border-radius: 10rem;
 }
+
+@keyframes sunrise {
+    0% {
+        box-shadow: none;
+    }
+}
+
+@keyframes rays {
+    0% {
+        box-shadow:
+            0 0 0 0 #FFDE0080,
+            0 0 0 20px #FFDE0080,
+            0 0 0 40px #FFDE0040,
+            0 0 0 60px #FFDE0020,
+            0 0 0 80px #FFDE0010,
+            0 0 40px 100px #FFDE0010;
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 20px #FFDE0080,
+            0 0 0 40px #FFDE0040,
+            0 0 0 60px #FFDE0020,
+            0 0 0 80px #FFDE0010,
+            0 0 0 100px #FFDE0000,
+            0 0 40px 100px #FFDE0010;
+    }
+}
+
+@keyframes blinking {
+    0% {
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+        -moz-transform: scaleY(1);
+        -ms-transform: scaleY(1);
+        -o-transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        -moz-transform: scaleY(0);
+        -ms-transform: scaleY(0);
+        -o-transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+#b6 .st span {
+    display: inline-block;
+    animation: blinking 0.5s ease 0.5s;
+    -webkit-animation: blinking 0.5s ease 0.5s;
+}
+
+#b7 .st span {}
 
 
 /*-----------end-span_style-----------*/

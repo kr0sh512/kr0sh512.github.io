@@ -35,9 +35,14 @@ function fade(i) {
     }, fadetime);
 }
 
-it = 2;
+// ! изменение текущей "локации"
+lt = 7;           // * количество готовых кадров
+it = 1;           // * номер стартового кадра
+is_debug = (it == 2); // * не сменять кадр
+// ! изменение текущей "локации"
+
 document.onclick = function () {
-    if (it == 5) return;
+    if (it == lt + 1 || is_debug) return;
     if (!isRun) {
         isRun = true;
         fade(it - 1);
@@ -51,7 +56,7 @@ document.onclick = function () {
 document.addEventListener("DOMContentLoaded", function () {
     setTimeout(function () {
         document.getElementById("load_outer").style.display = "none";
-        startAnim(1);
+        startAnim(it++);
     }, 400);
 });
 
