@@ -476,10 +476,7 @@ section.for-table {
   align-items: center;
 }
 
-
-
 .for-table a {
-  /* align-self: flex-end; */
   margin: 2rem;
 }
 
@@ -499,9 +496,17 @@ table {
 
 td,
 th {
-  border: 1px solid grey;
+  border: 2px solid grey;
   padding: 0.5rem 1.5rem;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+}
+
+tr:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+tr:first-child {
+  background-color: silver;
 }
 
 tr td:nth-child(odd) {
