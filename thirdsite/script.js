@@ -30,10 +30,8 @@ function startAnim(i) {
             }, 1200);
         }
         if (i == 36) {
-            setTimeout(function () {
-                document.querySelector("video").src = "videos/1.webm";
-                document.querySelector("#out-video").style = "display: flex;";
-            }, 1000);
+            document.querySelector("video").src = "videos/1.webm";
+            document.querySelector("#out-video").style = "display: flex;";
         }
     }, t);
     isRun = false;
@@ -53,7 +51,7 @@ function fade(i) {
 // * изменение текущей "локации"
 lt = 36;                  //  количество готовых кадров
 it = 1;                  // ! номер стартового кадра
-is_debug = false//(it != 1);    //  не сменять кадр
+is_debug = (it != 1);    //  не сменять кадр
 // * изменение текущей "локации"
 
 document.onclick = function () {
