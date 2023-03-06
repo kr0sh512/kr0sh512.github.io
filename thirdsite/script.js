@@ -29,11 +29,20 @@ function startAnim(i) {
                 document.querySelector("#out-video").style = "display: flex;";
             }, 1200);
         }
+        if (i == 36) {
+            setTimeout(function () {
+                document.querySelector("video").src = "videos/1.webm";
+                document.querySelector("#out-video").style = "display: flex;";
+            }, 1000);
+        }
     }, t);
     isRun = false;
 }
 
 function fade(i) {
+    if (i == 7) {
+        document.querySelector("#out-video").style = "display: none;";
+    }
     fadetime = 600;
     $('#b' + parseInt(i) + ' .st_text').fadeOut(fadetime);
     setTimeout(function () {
@@ -42,9 +51,9 @@ function fade(i) {
 }
 
 // * изменение текущей "локации"
-lt = 10;                  //  количество готовых кадров
-it = 10;                  // ! номер стартового кадра
-is_debug = (it != 1);    //  не сменять кадр
+lt = 36;                  //  количество готовых кадров
+it = 1;                  // ! номер стартового кадра
+is_debug = false//(it != 1);    //  не сменять кадр
 // * изменение текущей "локации"
 
 document.onclick = function () {
